@@ -31,7 +31,7 @@ h2, span, p{
   position: relative;
   display: flex;
   width:18rem;
-  bottom:15rem;
+  /* bottom:15rem; */
   text-align: center;
   flex-direction: column;
   min-width: 0;
