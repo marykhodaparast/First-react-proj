@@ -1,17 +1,20 @@
-//import Backdrop from "./components/Backdrop";
-import Todo from "./components/Todo";
-//import Modal from './components/Modal';
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import AllMeetupsPage from "./pages/AllMeetups";
+import NewMeetupPage from "./pages/NewMeetup";
+import FavoritesPage from "./pages/Favorites";
 function App() {
+  //localhost:3000/{path}
+  //my-site.com
   return (
     <div>
-      <h1>My Todos</h1>
-      <Todo text="Learn React"/>
-      <Todo text="Master React"/>
-      <Todo text="Something else" />
-      {/* <Modal /> */}
-      {/* <Backdrop/> */}
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AllMeetupsPage />}/>
+          <Route path="/new-meetup" element={<NewMeetupPage />}/>
+          <Route path="/favorites" element={<FavoritesPage />}/>
+        </Routes>
+      </BrowserRouter> */}
     </div>
   );
 }
-
 export default App;

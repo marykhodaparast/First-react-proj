@@ -1,12 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-//import reportWebVitals from './reportWebVitals';
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import { BrowserRouter, Routes } from "react-router-dom";
+// import "./index.css";
+// import App from "./App";
 
-ReactDOM.render( <App/> , document.getElementById('root'));
+// ReactDOM.render(
+//   <BrowserRouter>
+//     <App />
+//   </BrowserRouter>,
+//   document.getElementById("root")
+// );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals();
+
+import { render } from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AllMeetupsPage from "./pages/AllMeetups";
+import NewMeetupPage from "./pages/NewMeetup";
+import FavoritesPage from "./pages/Favorites";
+
+const rootElement = document.getElementById("root");
+render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<AllMeetupsPage />} />
+      <Route path="/new-meetup" element={<NewMeetupPage />} />
+      <Route path="/favorites" element={<FavoritesPage />} />
+    </Routes>
+  </BrowserRouter>,
+  rootElement
+);
