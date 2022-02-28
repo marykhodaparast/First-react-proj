@@ -17,10 +17,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllMeetupsPage from "./pages/AllMeetups";
 import NewMeetupPage from "./pages/NewMeetup";
 import FavoritesPage from "./pages/Favorites";
+import MainNavigatoin from './components/layout/MainNavigation';
 
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
+    <MainNavigatoin />
     <Routes>
       <Route path="/" element={<AllMeetupsPage />} />
       <Route path="/new-meetup" element={<NewMeetupPage />} />

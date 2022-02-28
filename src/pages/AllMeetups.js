@@ -1,4 +1,32 @@
+const DUMMY_DATA = [
+  {
+    id: "m1",
+    title: "title",
+    image:
+      "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821__340.jpg",
+    address: "address",
+    description: "description",
+  },
+  {
+    id: "m2",
+    title: "title2",
+    image:
+      "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821__340.jpg",
+    address: "address2",
+    description: "description2",
+  },
+];
 function AllMeetupsPage() {
-    return <div>All Meetups page</div>;
+  return (
+    <section>
+      <h1>All Meetups</h1>
+      {/* {[<li>Item1</li>,<li>Item2</li>]} */}
+      <ul>
+        {DUMMY_DATA.map((meetup) => {
+            return <li key={meetup.id}>{meetup.title}</li>;
+        })}
+      </ul>
+    </section>
+  );
 }
 export default AllMeetupsPage;
