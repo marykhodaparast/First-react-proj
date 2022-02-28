@@ -17,17 +17,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllMeetupsPage from "./pages/AllMeetups";
 import NewMeetupPage from "./pages/NewMeetup";
 import FavoritesPage from "./pages/Favorites";
-import MainNavigatoin from './components/layout/MainNavigation';
+// import MainNavigatoin from './components/layout/MainNavigation';
+import Layout from './components/layout/Layout';
 
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
-    <MainNavigatoin />
-    <Routes>
-      <Route path="/" element={<AllMeetupsPage />} />
-      <Route path="/new-meetup" element={<NewMeetupPage />} />
-      <Route path="/favorites" element={<FavoritesPage />} />
-    </Routes>
+    {/* <MainNavigatoin /> */}
+    <Layout>
+      <Routes>
+        <Route path="/" element={<AllMeetupsPage />} />
+        <Route path="/new-meetup" element={<NewMeetupPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+      </Routes>
+    </Layout>
   </BrowserRouter>,
   rootElement
 );
