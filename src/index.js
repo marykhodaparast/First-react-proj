@@ -19,7 +19,7 @@ import NewMeetupPage from "./pages/NewMeetup";
 import FavoritesPage from "./pages/Favorites";
 // import MainNavigatoin from './components/layout/MainNavigation';
 import Layout from './components/layout/Layout';
-
+//import { FavoritesContextProvider } from './store/favorite-contexts';
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
